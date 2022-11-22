@@ -21,8 +21,8 @@ class MainActivity2 : AppCompatActivity(), android.view.View.OnClickListener {
     private lateinit var button8: Button
     private lateinit var button9: Button
     private lateinit var button0: Button
-    private  var uewkushi1 = 0
-    private  var uewkushi2 = 0
+    private  var tic1 = 0
+    private  var tac2 = 0
     private  var player1= ""
     private  var player2= ""
     private lateinit var ann1:TextView
@@ -200,15 +200,15 @@ class MainActivity2 : AppCompatActivity(), android.view.View.OnClickListener {
             winner=2
         }
         if (winner==1){
-            Toast.makeText(this, "`gilocav $player1", Toast.LENGTH_SHORT).show()
-            uewkushi1+=1
+            Toast.makeText(this, "`გაიმარჯვა: $player1", Toast.LENGTH_SHORT).show()
+            tic1+=1
             activeplayer=1
         }else if (winner==2){
-            Toast.makeText(this, "gilocav $player2", Toast.LENGTH_SHORT).show()
-            uewkushi2+=1
+            Toast.makeText(this, "გაიმარჯვა: $player2", Toast.LENGTH_SHORT).show()
+            tac2+=1
             activeplayer=2
         }else if(pirvelivar.size+meorevar.size==9){
-            Toast.makeText(this, "megobrtobam gaimarjva", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "ფრეა", Toast.LENGTH_LONG).show()
             pirvelivar.clear()
             meorevar.clear()
         }
@@ -222,8 +222,8 @@ class MainActivity2 : AppCompatActivity(), android.view.View.OnClickListener {
             button7.isEnabled=false
             button8.isEnabled=false
             button9.isEnabled=false
-            ann1.text=uewkushi1.toString()
-            ann2.text=uewkushi2.toString()
+            ann1.text=tic1.toString()
+            ann2.text=tac2.toString()
             pirvelivar.clear()
             meorevar.clear()
 
